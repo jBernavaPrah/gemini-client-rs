@@ -1,3 +1,6 @@
+//! Demonstrates function calling over the live streaming API.
+//! Expect streaming text replies and occasional tool calls handled in code.
+
 use dotenv::dotenv;
 use gemini::v1beta::live::{
     Client, ClientContent, ClientMessage, Content, FunctionBehavior, FunctionCall,
