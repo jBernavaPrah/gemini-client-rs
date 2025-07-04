@@ -1,3 +1,6 @@
+//! Streams microphone input to Gemini and prints text responses from the model.
+//! Expect transcribed answers in your terminal.
+
 use dotenv::dotenv;
 use gemini::v1beta::live::{
     Client, ClientMessage, GenerationConfig, InlineData, RealtimeInput, ResponseModality,
