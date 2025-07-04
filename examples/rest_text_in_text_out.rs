@@ -1,3 +1,6 @@
+//! Sends a single text prompt over REST and prints the Gemini response.
+//! Expect one text reply displayed in the console.
+
 use dotenv::dotenv;
 use gemini::v1beta::{
     Content, Part, PartData, Role,

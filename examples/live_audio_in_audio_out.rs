@@ -1,3 +1,6 @@
+//! Streams microphone input to Gemini and plays the model's audio responses.
+//! Expect real-time voice replies to whatever you say.
+
 use dotenv::dotenv;
 use gemini::v1beta::live::{
     Client, ClientMessage, GenerationConfig, InlineData, PartData, RealtimeInput, ResponseModality,
