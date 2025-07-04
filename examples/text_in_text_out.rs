@@ -9,6 +9,9 @@ use serde_json::json;
 use tokio_stream::StreamExt;
 use tracing::info;
 
+#[path = "common/utils.rs"]
+mod utils;
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     dotenv().ok();

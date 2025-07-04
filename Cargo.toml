@@ -31,3 +31,7 @@ dotenv = { version = "0.15.0" }
 chrono = { version = "0.4.40", features = ["serde"] }
 hyper = { version = "1.6", features = ["full"] }
 bytes = "1.5"
+cpal = "0.16"
+rodio = "0.20"
+hound = "3.5"
+audio-gate = "0.1.4"

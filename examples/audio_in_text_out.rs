@@ -5,6 +5,9 @@ use gemini::v1beta::live::{
 };
 use tokio_stream::StreamExt;
 use tracing::info;
+
+#[path = "common/utils.rs"]
+mod utils;
 use utils::{OutputAudioConfig, listen_from_default_input};
 
 #[tokio::main]
