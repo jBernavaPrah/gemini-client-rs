@@ -1,31 +1,33 @@
 [package]
-name = "gemini"
+name = "gemini-client-rs"
 version = "0.1.0"
 edition = "2024"
 publish = false
 license = "MIT"
 
+[lib]
+name = "gemini"
+
 [dependencies]
-reqwest = { workspace = true, features = ["stream", "http2", "brotli", "json"] }
-tokio = { workspace = true, features = ["macros", "sync"] }
-ezsockets = { workspace = true, features = ["client", "native-tls", "rustls"] }
-tracing = { workspace = true }
-async-trait = { workspace = true }
-serde = { workspace = true, features = ["derive"] }
-serde_json = { workspace = true }
-derive-new = { workspace = true }
-derive_setters = { workspace = true }
-base64 = { workspace = true }
-uuid = { workspace = true, features = ["v4"] }
-url = { workspace = true }
-tokio-stream = { workspace = true }
-thiserror = { workspace = true }
+reqwest = { version = "0.12.15", features = ["stream", "http2", "brotli", "json"] }
+tokio = { version = "1.45.1", features = ["macros", "sync"] }
+ezsockets = { version = "0.7.0", features = ["client", "native-tls", "rustls"] }
+tracing = { version = "0.1.41" }
+async-trait = { version = "0.1.88" }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = { version = "1.0.140" }
+derive-new = { version = "0.7.0" }
+derive_setters = { version = "0.1.7" }
+base64 = { version = "0.22.1" }
+uuid = { version = "1.17.0", features = ["v4"] }
+url = { version = "2.5.4" }
+tokio-stream = { version = "0.1.17" }
+thiserror = { version = "2.0.12" }
 
 [dev-dependencies]
-tokio = { workspace = true, features = ["full"] }
-tracing-subscriber = { workspace = true, features = ["env-filter"] }
-dotenv = { workspace = true }
-chrono = { workspace = true, features = ["serde"] }
-utils = { path = "../utils" }
+tokio = { version = "1.45.1", features = ["full"] }
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+dotenv = { version = "0.15.0" }
+chrono = { version = "0.4.40", features = ["serde"] }
 hyper = { version = "1.6", features = ["full"] }
 bytes = "1.5"
