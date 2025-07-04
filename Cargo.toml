@@ -1,0 +1,31 @@
+[package]
+name = "gemini"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT"
+
+[dependencies]
+reqwest = { workspace = true, features = ["stream", "http2", "brotli", "json"] }
+tokio = { workspace = true, features = ["macros", "sync"] }
+ezsockets = { workspace = true, features = ["client", "native-tls", "rustls"] }
+tracing = { workspace = true }
+async-trait = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+derive-new = { workspace = true }
+derive_setters = { workspace = true }
+base64 = { workspace = true }
+uuid = { workspace = true, features = ["v4"] }
+url = { workspace = true }
+tokio-stream = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full"] }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+dotenv = { workspace = true }
+chrono = { workspace = true, features = ["serde"] }
+utils = { path = "../utils" }
+hyper = { version = "1.6", features = ["full"] }
+bytes = "1.5"
